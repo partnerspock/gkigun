@@ -9,10 +9,12 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: #f4f7fa; 
+    background-color: #f4f7fa;
     color: #334;
-    background-image: url('/gki/gkompa/img/sea.png'); /*linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), */
-    background-size: cover; /* Use 'cover' if you want it to fill the whole screen */
+    background-image: url('img/sea.png');
+    /*linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), */
+    background-size: cover;
+    /* Use 'cover' if you want it to fill the whole screen */
     background-repeat: no-repeat;
 }
 
@@ -27,9 +29,9 @@ h1 {
 }
 
 .logo {
-    width: 60px; 
+    width: 60px;
     /* You still need 'height: auto;' or 'height: 75px;' here */
-    object-fit: cover; 
+    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -42,7 +44,7 @@ h1 {
     padding: 10px;
     margin: 20px 0px;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(26, 32, 44, 0.15); 
+    box-shadow: 0 10px 25px rgba(26, 32, 44, 0.15);
     font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 2px;
@@ -58,8 +60,10 @@ h1 {
 
 .area-box {
     display: block;
-    background-color: rgba(255, 255, 255, 0.3); /* Darker overlay */
-    backdrop-filter: blur(7.5px); /* Optional: blur background for focus */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Darker overlay */
+    backdrop-filter: blur(7.5px);
+    /* Optional: blur background for focus */
     padding: 40px;
     border-radius: 8px;
     margin-top: 1%;
@@ -68,7 +72,8 @@ h1 {
 
 /* Define the keyframes for the blinking animation */
 @keyframes blink {
-     /* Visible Start: 0s (0%) */
+
+    /* Visible Start: 0s (0%) */
     0% {
         opacity: 0;
     }
@@ -81,7 +86,8 @@ h1 {
     /* Stay Hidden Start: at 2s mark (~22.22%) */
     /* Stay Hidden End: at 7s mark (~77.78%) */
     77.78% {
-        opacity: 1; /* Remains invisible during the 5s dwell time */
+        opacity: 1;
+        /* Remains invisible during the 5s dwell time */
     }
 
     /* Fade In End / Visible End: at 9s mark (100%) */
@@ -99,87 +105,110 @@ h1 {
 
 .seat-container {
     display: flex;
-    gap: 75px; /* Increased gap */
+    gap: 75px;
+    /* Increased gap */
     justify-content: space-between;
     width: 100%;
-    margin:0px;
+    margin: 0px;
 }
 
 .seat-section {
     display: grid;
-    grid-template-columns: repeat(8, 50px); /* Slightly larger seats */
-    gap: 10px; /* Slight gap increase */
-    border-radius: 8px; 
+    grid-template-columns: repeat(8, 50px);
+    /* Slightly larger seats */
+    gap: 10px;
+    /* Slight gap increase */
+    border-radius: 8px;
 }
 
 .seat-button {
     width: 50px;
     height: 50px;
-    border: none; /* No border for modern look */
+    border: none;
+    /* No border for modern look */
     cursor: pointer;
     font-weight: 600;
-    border-radius: 6px; /* Rounded corners */
+    border-radius: 6px;
+    /* Rounded corners */
     transition: all 0.1s ease-in-out;
 }
 
 .seat-button:hover:not(:disabled) {
     /* background-color: #d9faeb; */
     border: 1px solid;
-    border-color: green; /* Highlight available seats blue on hover */
+    border-color: green;
+    /* Highlight available seats blue on hover */
     color: black;
 }
 
 .seat-button:hover.seat-selected {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    background-color: #bde0ba; /* Keep selected color on hover */
+    background-color: #bde0ba;
+    /* Keep selected color on hover */
     border: 2px solid green;
     color: green;
 }
 
 .seat-available {
     border: 1px solid;
-    border-color: #198754; /* Light gray/blue available */
+    border-color: #198754;
+    /* Light gray/blue available */
     color: black;
 }
 
 .seat-selected {
-    background-color: #bde0ba; /* A distinct color for selection, e.g., blue */
+    background-color: #bde0ba;
+    /* A distinct color for selection, e.g., blue */
     color: black;
-    border: 2px solid green; 
+    border: 2px solid green;
 }
 
 .seat-taken {
-    background-color: green; /* Vibrant green taken */
+    background-color: green;
+    /* Vibrant green taken */
     color: white;
-    cursor: default; /* Not selectable/bookable */
+    cursor: default;
+    /* Not selectable/bookable */
 }
 
 /* Modal and Form Styles (mostly unchanged but included for completeness) */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 1000; /* Higher z-index */
+    z-index: 1000;
+    /* Higher z-index */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 32, 44, 0.5); /* Darker overlay */
-    backdrop-filter: blur(5px); /* Optional: blur background for focus */
+    background-color: rgba(26, 32, 44, 0.5);
+    /* Darker overlay */
+    backdrop-filter: blur(5px);
+    /* Optional: blur background for focus */
 }
 
 .modal-content {
     background-color: #ffffff;
-    margin: 5% auto; /* Move slightly higher */
+    margin: 5% auto;
+    /* Move slightly higher */
     padding: 30px;
     width: 100%;
     max-width: 500px;
-    border-radius: 8px; /* Highly rounded */
+    border-radius: 8px;
+    /* Highly rounded */
     animation: fadeIn 0.1s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-25px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .seat-info {
@@ -190,7 +219,8 @@ h1 {
     text-decoration: none;
 }
 
-.modal-content h2, .modal-content h3 {
+.modal-content h2,
+.modal-content h3 {
     color: #2d3748;
     margin-bottom: 20px;
     font-weight: 600;
@@ -199,7 +229,7 @@ h1 {
 /* Form Input UI */
 .modal-content label {
     display: block;
-    padding-bottom: 8px; 
+    padding-bottom: 8px;
     font-weight: 500;
     color: #4a5568;
     text-align: left;
@@ -207,27 +237,28 @@ h1 {
 
 .modal-content input[type="text"] {
     width: 100%;
-    padding: 14px 18px; 
-    margin-bottom: 20px; 
+    padding: 14px 18px;
+    margin-bottom: 20px;
     box-sizing: border-box;
-    border: 1px solid #cbd5e0; 
-    border-radius: 10px; 
+    border: 1px solid #cbd5e0;
+    border-radius: 10px;
     transition: border-color 0.3s, box-shadow 0.3s;
     font-size: 1em;
     background-color: #f7fafc;
 }
 
 .modal-content input[type="text"]:focus {
-    outline: none; 
-    border-color: #4299e1; /* Blue focus color */
-    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.2); 
+    outline: none;
+    border-color: #4299e1;
+    /* Blue focus color */
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.2);
 }
 
 /* Radio Group */
 .radio-group {
     justify-content: space-between;
     display: flex;
-    text-align: center; 
+    text-align: center;
 }
 
 .radio-group p {
@@ -243,8 +274,8 @@ h1 {
 
 .radio-group input[type="radio"] {
     width: 16px;
-    height: 16px; 
-    accent-color: #4299e1; 
+    height: 16px;
+    accent-color: #4299e1;
 }
 
 .button-group {
@@ -275,7 +306,8 @@ h1 {
     border-radius: .25rem;
     /* Specific styling for the clear action */
     color: #000;
-    background-color: #ffc107; /* Warning/Yellow color */
+    background-color: #ffc107;
+    /* Warning/Yellow color */
     border-color: #ffc107;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
@@ -297,22 +329,22 @@ h1 {
 
 /* Huawei MatePad 11 / 12 / 12.6 (WQXGA 2560×1600, ~1280 CSS px landscape) */
 @media screen and (max-width: 1400px) {
-    
+
     .area-box {
         width: 70%;
         padding: 15px 25px;
-        margin-top:0;
+        margin-top: 0;
     }
 
     .seat-container {
         gap: 20px;
         flex-direction: row;
-        margin:0px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
         padding: 0;
     }
-    
+
     .d-flex {
-        margin:0;
+        margin: 0;
         padding: 1px;
     }
 
@@ -330,10 +362,10 @@ h1 {
     #screen-display {
         font-size: 1.4em;
         padding: 12px;
-        margin:0;
+        margin: 0;
     }
 
-    .button-group{
+    .button-group {
         display: none;
     }
 
