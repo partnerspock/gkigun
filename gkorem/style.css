@@ -30,9 +30,10 @@ body {
     justify-content: space-between;
     padding: 20px 20px;
     background: transparent;
-    /*background: rgba(26, 26, 46, 0.95);
+    background: rgba(26, 26, 46, 0.05);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);*/
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-left,
@@ -171,7 +172,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 70px 5px;
+    padding: 5px 5px;
     min-width: max-content;
     margin: 0 auto;
 }

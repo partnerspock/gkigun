@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 // --- DATABASE CONFIGURATION ---
 $host = 'localhost';
-$db   = 'korem'; 
+$db   = 'kompa'; 
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';

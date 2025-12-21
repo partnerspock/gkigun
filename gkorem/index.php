@@ -2,7 +2,7 @@
 // index.php - Cinema App Style Seat Selection
 // --- DATABASE CONFIGURATION ---
 $host = 'localhost';
-$db   = 'korem'; 
+$db   = 'kompa'; 
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
